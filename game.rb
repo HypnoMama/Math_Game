@@ -16,19 +16,16 @@ class Game
         puts "Player 1, what is your name?"
         p1_name = gets.chomp
         p1 = Player.new(p1_name)
-        # puts "#{p1.name} has #{p1.lives} lives"
     end
 
     def player2
         puts "Player 2, what is your name?"
         p2_name = gets.chomp
         p2 = Player.new(p2_name)
-        # puts "#{p2.name} has #{p2.lives} lives"
     end
 
 
-    def current_player_turn
-        
+    def current_player_turn        
         current_player = @p1
         while @p1.lives > 0 && @p2.lives > 0
             Turn.new(current_player)
