@@ -1,8 +1,9 @@
 class MathQuestion
-    attr_reader :check_answer, :question
+    attr_reader :question, :answer
 
     def initialize()
-        @question = question
+        @question = create_question
+        @answer = eval(@question)
     end
 
     def first_num
@@ -24,15 +25,11 @@ class MathQuestion
         # puts "What is the answer to: #{question}"
     end
 
-    def correct_answer(question)
-        # question = "#{first} #{operator} #{second}"
-        eval(question)
-        
-    end
 
-    def check_answer(answer)
-        answer == self.correct_answer
-    end
+
+    # def check_answer(answer)
+    #     answer == self.correct_answer
+    # end
 
 
 end
